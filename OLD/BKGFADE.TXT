@@ -1,0 +1,39 @@
+BKG   Windows background fader
+==============================
+
+  This program is for Windows users who have limited memory and/or
+think faded colors look nice as a background.  This program will 
+display a color fade as your Windows background.  A color fade means 
+that the color gradually changes from one side to another in a smooth
+fashion.  This App. has the advantage over wallpaper of needing very 
+little memory.
+
+  Once you run the program, the starting/ending colors and the fade
+direction can be set from a dialog box.  The dialog box is brought
+up by clicking on the background with the RIGHT mouse button. Setting
+RGB values for the colors is done with scroll bars and/or mini edit boxes.
+The fade style (Vertical, Horizontal, Vertical Center, Horizontal center)
+is set via a combo box. The dialog box also has options to save the color
+or exit the program.
+
+  Before running BKG, make sure you set your wallpaper to NONE.  If you 
+don't everything will work OK but the wallpaper will still be taking up 
+whatever memory it needs for the bitmap.
+
+  If you use other programs which are invoked by clicking the right mouse
+button on the background (BackMenu for example), you can disable the mouse
+for this program by adding the line UseMouse=No to the [BKG] section of 
+your Win.Ini file. Note that if you do this you will need to edit Win.Ini
+to change colors in the future as you will have no way of getting to the 
+dialog box.
+
+  Feel free to copy, distribute, fold, spindle and mutilate this program
+as you like, BUT... I hereby claim no responsibility whatsoever for any
+reason for anything... ever. Go GATORS!
+
+
+
+                        Craig Fitzgerald
+                        cf@reef.cis.ufl.edu
+                        2900 SW 2nd Ct.
+                        Gainesville, Fl. 32601

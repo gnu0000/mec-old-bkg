@@ -1,0 +1,6 @@
+#include <windows.h>
+#include "bkg.h"
+
+BLANK    ICON  bkg.ico
+
+rcinclude bkg.dlg

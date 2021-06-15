@@ -1,0 +1,9 @@
+all: bkg.exe
+
+
+bkg.exe: bkg.obj bkg.dlg bkg.rc
+     link $*, /f/nod/packc/packd, NUL, slibcew libw, $*.def
+     rc bkg
+
+bkg.obj: bkg.c bkg.h
+     cl -c -Gsw -Oxaz -W2 $*.c

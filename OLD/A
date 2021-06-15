@@ -1,0 +1,62 @@
+
+void FAR Fade (HDC hdc, RECT rc, long lTopColor, long lBottomColor, USHORT uMethod)
+   {
+   SHORT    r,g,b,R,G,B,rx,gx,bx;
+   HBRUSH   hBrush;
+   USHORT   i,cxClient, cyClient;
+
+   cyClient  = rc.bottom - rc.top;
+   cxClient  = rc.right  - rc.left;
+
+   r = GetRValue (lTopColor);
+   g = GetGValue (lTopColor);
+   b = GetBValue (lTopColor);
+   R = GetRValue (lBottomColor);
+   G = GetGValue (lBottomColor);
+   B = GetBValue (lBottomColor);
+
+   for (i = 0; i <= 64; i++)
+      {       
+      rx = r + ((R - r) * i) / 64;
+      gx = g + ((G - g) * i) / 64;
+      bx = b + ((B - b) * i) / 64;
+      hBrush = CreateSolidBrush (RGB ((BYTE)rx, (BYTE)gx, (BYTE)bx));
+      switch (uMethod)
+         {
+         case VERTICAL:
+            rc.top    = (short) (i * cyClient / 64);
+            rc.bottom = rc.top + cyClient / 64 + 1;
+            break;
+         case HORIZONTAL:
+            rc.left   =(short) (i * cxClient / 64);
+            rc.right  =rc.left + cxClient / 64 + 1;
+            break;
+         case VERTCTR:
+            rc.top    = (short) ((long)i * (long) cyClient / 128L);
+            rc.bottom = rc.top + cyClient / 128 + 1;
+            break;
+         case HORZCTR:
+            rc.left   =(short) ((long)i * (long)cxClient / 128L);
+            rc.right  =rc.left + cxClient / 128 + 1;
+            break;
+         }
+      FillRect (hdc, &rc, hBrush);
+
+      if (uMethod == VERTCTR)
+         {
+         rc.top    = (short) ((long)(127-i) * (long)cyClient / 128L);
+         rc.bottom = rc.top + cyClient / 128 + 1;
+         FillRect (hdc, &rc, hBrush);
+         }
+      if (uMethod == HORZCTR)
+         {
+         rc.left   =(short) ((long)(127-i) * (long)cxClient / 128L);
+         rc.right  =rc.left + cxClient / 128 + 1;
+         FillRect (hdc, &rc, hBrush);
+         }
+      DeleteObject (hBrush);
+      }
+   }
+
+
+

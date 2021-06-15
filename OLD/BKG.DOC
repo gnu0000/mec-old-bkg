@@ -1,0 +1,24 @@
+                        --- BKG ---
+
+                 Faded Background for windows
+
+      This program will display a color fade in your windows background.
+   It has the advantage over wallpaper of needing almost no memory.
+
+      To use this program you must have the wallpaper set to (NONE).
+   There are 8 command line options you can specify to control the
+   fade of the background, all are optional. They are:
+
+               -V ... Specify vertical fade (default)
+               -H ... Specify horizontal fade
+               -r ... starting red value
+               -g ... starting green value
+               -b ... starting blue value
+               -R ... ending red value
+               -G ... ending green value
+               -B ... ending blue value
+
+      The starting color refers to the color at the top of the window 
+   (or left in the case of horizontal fades). Ending color is the final
+   color at the bottom (or right). This app may be terminated by the
+   task manager.

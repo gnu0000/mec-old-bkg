@@ -1,0 +1,12 @@
+NAME           back
+
+DESCRIPTION    'back off'
+EXETYPE        WINDOWS
+STUB           'WINSTUB.EXE'
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE       1024
+STACKSIZE      8192
+EXPORTS        WndProc
+               JnkWndProc
+               SetColorDlgProc

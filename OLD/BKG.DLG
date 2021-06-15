@@ -1,0 +1,47 @@
+SETCOLOR DIALOG LOADONCALL MOVEABLE DISCARDABLE 22, 37, 213, 133
+CAPTION "Shade Background"
+STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
+BEGIN
+    CONTROL "Top Color", ID_START, "static", SS_CENTER | WS_CHILD, 13, 6, 83, 8
+    CONTROL "Bottom Color", ID_END, "static", SS_CENTER | WS_CHILD, 13, 62, 82, 8
+    CONTROL "R", -1, "static", SS_CENTER | WS_CHILD, 3, 16, 8, 8
+    CONTROL "G", -1, "static", SS_CENTER | WS_CHILD, 3, 28, 8, 8
+    CONTROL "B", -1, "static", SS_CENTER | WS_CHILD, 3, 40, 8, 8
+    CONTROL "", ID_TOP, "scrollbar", SBS_HORZ | WS_CHILD, 13, 16, 82, 8
+    CONTROL "", 201, "scrollbar", SBS_HORZ | WS_CHILD, 13, 28, 82, 8
+    CONTROL "", 202, "scrollbar", SBS_HORZ | WS_CHILD, 13, 40, 82, 8
+    CONTROL "", 210, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 14, 16, 12
+    CONTROL "", 211, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 26, 16, 12
+    CONTROL "", 212, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 38, 16, 12
+    CONTROL "R", -1, "static", SS_CENTER | WS_CHILD, 3, 72, 8, 8
+    CONTROL "G", -1, "static", SS_CENTER | WS_CHILD, 3, 84, 8, 8
+    CONTROL "B", -1, "static", SS_CENTER | WS_CHILD, 3, 96, 8, 8
+    CONTROL "", ID_BOTTOM, "scrollbar", SBS_HORZ | WS_CHILD, 13, 72, 82, 8
+    CONTROL "", 301, "scrollbar", SBS_HORZ | WS_CHILD, 13, 84, 82, 8
+    CONTROL "", 302, "scrollbar", SBS_HORZ | WS_CHILD, 13, 96, 82, 8
+    CONTROL "", 310, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 70, 16, 12
+    CONTROL "", 311, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 82, 16, 12
+    CONTROL "", 312, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 99, 94, 16, 12
+    CONTROL "", ID_DIR, "combobox", CBS_DROPDOWNLIST | WS_CHILD, 125, 14, 80, 44
+    CONTROL "", ID_RECT, "static", SS_BLACKFRAME | WS_CHILD, 125, 28, 80, 78
+    CONTROL "Cancel", BLUE, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 42, 112, 33, 14
+    CONTROL "OK", GREEN, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 5, 112, 33, 14
+    CONTROL "Save", ID_SAVE, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 136, 112, 33, 14
+    CONTROL "Quit", ID_QUIT, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 173, 112, 33, 14
+    CONTROL "About...", ID_ABOUT, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 89, 112, 33, 14
+END
+
+ABOUT DIALOG LOADONCALL MOVEABLE DISCARDABLE 97, 33, 110, 119
+STYLE WS_DLGFRAME | WS_POPUP
+BEGIN
+    CONTROL "Shaded Background", 100, "static", SS_CENTER | WS_CHILD, 7, 12, 96, 8
+    CONTROL "-BY-", 101, "static", SS_CENTER | WS_CHILD, 7, 21, 96, 8
+    CONTROL "Craig Fitzgerald", 102, "static", SS_CENTER | WS_CHILD, 7, 30, 96, 8
+    CONTROL "cf@reef.cis.ufl.edu", 103, "static", SS_CENTER | WS_CHILD, 7, 48, 96, 8
+    CONTROL "2900 SW 2nd Ct.", 104, "static", SS_CENTER | WS_CHILD, 8, 56, 96, 8
+    CONTROL "Gainesville, Fl. 32601", 105, "static", SS_CENTER | WS_CHILD, 7, 65, 96, 8
+    CONTROL "Feel free to send money", 106, "static", SS_CENTER | WS_CHILD, 8, 82, 96, 8
+    CONTROL "OK", IDOK, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 37, 97, 34, 14
+END
+
+
